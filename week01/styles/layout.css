@@ -1,51 +1,71 @@
 /*-------------------------------------------------Global styles-------------------------------------------------*/
 
-body {
-    font-family: Arial, sans-serif;
+* {
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
+    box-sizing: border-box;
 }
 
-header,
-footer {
-    background: #333;
-    color: white;
-    padding: 1em;
-    text-align: center;
+body {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
 }
 
-nav {
-    background: #444;
+header {
+    grid-column: 1 / -1;
+    height: 10rem;
     color: white;
-    padding: 0.5em;
+    padding: 1rem;
+    background-color: rgb(51, 51, 51);
+}
+
+.links {
+    grid-column: 1 / -1;
     display: flex;
+    flex-direction: row;
     justify-content: space-around;
+    background-color: rgb(0, 0, 0);
+    padding: 2rem;
 }
 
-nav a {
+.links a {
     color: white;
     text-decoration: none;
+    font-size: 2rem;
 }
 
 .content {
-    flex: 1;
-    padding: 1em;
-    display: flex;
+    grid-column: 1 / -1;
+    min-height: 62.5vh;
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(12, 1fr);
 }
 
 main {
-    flex: 1;
-    background: #eee;
-    padding: 1em;
+    grid-column: 1 / 10;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(204, 204, 204);
+    font-size: 2rem;
+    padding: 1rem;
 }
 
 aside {
-    width: 200px;
-    background: #ccc;
-    padding: 1em;
+    grid-column: 10 / 12;
+    background-color: white;
+    font-size: 2rem;
+    padding: 1rem;
+}
+
+footer {
+    margin: top auto;
+    height: 20rem;
+    grid-column: 1 / -1;
+    font-size: 2rem;
+    color: white;
+    background-color: rgb(51, 51, 51);
+    padding: 1rem;
 }
 
 /*-----------------------------------------------Index Page Only-------------------------------------------------*/
