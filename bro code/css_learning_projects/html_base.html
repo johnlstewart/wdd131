@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="John Stewart">
+    <meta name="description" content="Base HTML for CSS Practice">
+    <link rel="stylesheet" href="styles/css_base.css">
+    <title>CSS Practice | John Stewart</title>
+</head>
+
+<body>
+    <div id="header"> <!--Unique one-time ID, rather than a class-->
+        <img src="img/pathologic_banner.webp" alt="Pathologic Banner">
+        <h1>Citing Web</h1>
+        <p>sub-text that is witty or interesting</p>
+    </div>
+    <div id="navmenu">
+        <a href="#">Link1</a> <!--'#' is a placeholder for future links using javascript-->
+        <a href="#">Link2</a>
+        <a href="#">Link3</a>
+        <a href="#" style="float:right">Link4</a>
+    </div>
+    <div class="row">
+        <!--The "row" class typically defines a horizontal group of columns within the grid system. It acts as a container for columns, ensuring they are aligned, evenly spaced, and correctly wrapped within the layout.-->
+        <div class="leftcolumn">
+            <div class="card">
+                <h2>TITLE HEADING</h2>
+                <h5>Title description, [date-format-here]</h5>
+                <div class="entryimg" style="height: 200px;">Image Name</div>
+                <p>Eye-Catching words...</p>
+                <p>The bulk of the paragragh filled up with the core information that you want to talk about with
+                    people. It may take multiple p elements, but you will eventually run out of things to say</p>
+            </div>
+            <div class="card">
+                <h2>OLD TITLE HEADING</h2>
+                <h5>Title description, [previous-date-here]</h5>
+                <div class="entryimg" style="height: 200px;">Image Name</div>
+                <p>Eye-Catching words again...</p>
+                <p>The bulk of the paragragh filled up with the core information that you want to talk about with
+                    people. It may take multiple p elements, but you will eventually run out of things to say</p>
+            </div>
+        </div>
+        <div class="rightcolumn">
+            <div class="card">
+                <h2>About Me</h2>
+                <div class="aboutportrait" style="height: 100px;">about portrait</div>
+                <p>A bit about me</p>
+            </div>
+        </div>
+</body>
+<footer>Footer</footer>
+
+</html>

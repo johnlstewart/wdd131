@@ -1,0 +1,114 @@
+/*-------------------------Normalized/Reset styles-------------------------*/
+/* Ensures consistent styling across different browsers.*/
+html,
+body,
+div {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/*-------------------------Base Variables-------------------------*/
+/* Defines CSS custom properties for global reuse (colors, fonts, etc.). */
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+}
+
+/*-------------------------Global Styles-------------------------*/
+/* Sets default styles for typography, links, and foundational elements. */
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: var(--text-color);
+}
+
+/*-------------------------Layout and Grid System-------------------------*/
+/* Defines styles for the main layout components (header, footer, nav). */
+
+.header {
+    color: initial;
+}
+
+.footer {
+    color: initial;
+}
+
+/*-------------------------Component Styles-------------------------*/
+/*Styles for reusable UI components (buttons, cards, modals).*/
+
+button {
+    color: initial;
+}
+
+/*-------------------------Page-Specific Styles-------------------------*/
+/* Styles specific to individual pages or sections.*/
+
+
+
+
+/*
+ * CSS File Structure Overview:
+ * 
+ * 1. Reset or Normalize Styles
+ *    - Ensures consistent styling across different browsers.
+ *    Example:
+ *    html, body, div, span, ... {
+ *      margin: 0;
+ *      padding: 0;
+ *      border: 0;
+ *      ...
+ *    }
+ * 
+ * 2. :root or Base Variables
+ *    - Defines CSS custom properties for global reuse (colors, fonts, etc.).
+ *    Example:
+ *    :root {
+ *      --primary-color: #007bff;
+ *      --secondary-color: #6c757d;
+ *      ...
+ *    }
+ * 
+ * 3. Global Styles
+ *    - Sets default styles for typography, links, and foundational elements.
+ *    Example:
+ *    body {
+ *      font-family: 'Open Sans', sans-serif;
+ *      color: var(--text-color);
+ *      ...
+ *    }
+ * 
+ * 4. Layout and Grid System
+ *    - Defines styles for the main layout components (header, footer, nav).
+ *    Example:
+ *    .header { ... }
+ *    .footer { ... }
+ * 
+ * 5. Component Styles
+ *    - Styles for reusable UI components (buttons, cards, modals).
+ *    Example:
+ *    .button { ... }
+ *    .card { ... }
+ * 
+ * 6. Page-Specific Styles
+ *    - Styles specific to individual pages or sections.
+ *    Example:
+ *    /* Home Page Specific Styles */
+/*
+ *    .home-banner { ... }
+ * 
+ * 7. Responsive Styles
+ *    - Media queries for adapting the layout to different screen sizes.
+ *    Example:
+ *    @media (max-width: 768px) {
+ *      .header { ... }
+ *      ...
+ *    }
+ * 
+ * 8. Utilities and Helpers
+ *    - Utility classes for margins, padding, text alignment, etc.
+ *    Example:
+ *    .mt-1 { margin-top: 1rem; }
+ *    .text-center { text-align: center; }
+ * 
+ * This comment serves as a guide for the organization and structure of the CSS file.
+ */
