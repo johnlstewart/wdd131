@@ -11,16 +11,52 @@ div {
 /*-------------------------Base Variables-------------------------*/
 /* Defines CSS custom properties for global reuse (colors, fonts, etc.). */
 :root {
-    --primary-color: #007bff;
-    --secondary-color: #6c757d;
+    --primary-color: #b66c47;
+    /* A dusty rose shade for primary elements */
+    --secondary-color: #71372d;
+    /* A deep reddish-brown for secondary elements */
+    --accent-color: #c7865f;
+    /* A vibrant shade for calls to action and highlights */
+    --text-main: #1f1614;
+    /* Nearly black, suitable for primary text */
+    --text-secondary: #2d2221;
+    /* A dark, muted brown for secondary text */
+    --background-main: #11372d;
+    /* Dark background for depth and richness */
+    --background-secondary: #723938;
+    /* A muted tone for secondary backgrounds or surfaces */
+    --border-color: #2c2120;
+    /* Close to the secondary text color, for borders or separators */
+    --hover-color: #19913495;
+    /* A lighter brown with vibrancy for hover states */
+    --shadow-color: #1e1513;
+    /* Nearly black, for drop shadows or text shadows */
 }
+
+/*-------------------------Font Face Definitions-------------------------*/
+/* Custom font definitions */
+@font-face {
+    font-family: 'FrizQuadrata';
+    src: url('../fonts/FrizQuadrata-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FrizQuadrata';
+    src: url('../fonts/FrizQuadrata-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
 
 /*-------------------------Global Styles-------------------------*/
 /* Sets default styles for typography, links, and foundational elements. */
 body {
-    font-family: 'Open Sans', sans-serif;
-    color: var(--text-color);
+    font-family: 'FrizQuadrata', sans-serif;
+    color: var(--text-main);
 }
+
 
 /*-------------------------Layout and Grid System-------------------------*/
 /* Defines styles for the main layout components (header, footer, nav). */
