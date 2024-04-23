@@ -54,7 +54,7 @@ div {
 /* Sets default styles for typography, links, and foundational elements. */
 body {
     font-family: 'FrizQuadrata', sans-serif;
-    color: var(--text-main);
+    padding: 10px;
 }
 
 
@@ -62,25 +62,83 @@ body {
 /* Defines styles for the main layout components (header, footer, nav). */
 
 .header {
-    color: initial;
+    padding: 30px;
+    text-align: center;
+    background:#71372d;
+    /* Your secondary background variable */
 }
 
-.footer {
-    color: initial;
+.header h1 {
+    font-size: 50px;
+    color: var(--primary-color);
+    /* Your primary color variable */
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: var(--secondary-color);
+    /* Your secondary color variable */
+}
+
+/* Style the topnav links */
+.topnav a {
+    float: left;
+    display: block;
+    color: var(--text-secondary);
+    /* Your text secondary color variable */
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+    background-color: var(--accent-color);
+    /* Your accent color variable */
+    color: var(--text-main);
+    /* Your main text color variable */
 }
 
 /*-------------------------Component Styles-------------------------*/
 /*Styles for reusable UI components (buttons, cards, modals).*/
 
-button {
-    color: initial;
+.card {
+    background-color: var(--background-secondary);
+    /* Using your background secondary variable */
+    padding: 20px;
+    margin-top: 20px;
 }
 
 /*-------------------------Page-Specific Styles-------------------------*/
 /* Styles specific to individual pages or sections.*/
 
 
+/*--------------------------------HOME---------------------------------*/
 
+
+
+/* Left column */
+.leftcolumn {
+    float: left;
+    width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+    float: left;
+    width: 25%;
+    background-color: var(--background-secondary);
+    /* Using your background secondary variable */
+    padding-left: 20px;
+}
+
+/* Footer */
+.footer {
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+    margin-top: 20px;
+}
 
 /*
  * CSS File Structure Overview:
