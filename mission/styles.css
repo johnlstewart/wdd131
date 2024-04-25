@@ -18,14 +18,10 @@ body {
 /*-------------------------Global Styles-------------------------*/
 /* Sets default styles for typography, links, and foundational elements. */
 
-.wrapper {
-    width: 600px;
-    margin: 0 auto;
-}
-
 body {
     font-family: 'Times New Roman', Times, serif;
     font-size: 20px;
+    line-height: 1.5;
     color: var(--primary-color)
 }
 
@@ -33,34 +29,59 @@ body {
 /* Defines styles for the main layout components (header, footer, nav). */
 
 .core {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: auto minmax(0, 1fr) auto;
-    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
     min-height: 100vh;
     border: 1px black solid;
+    box-sizing: border-box;
+}
+
+.title, main, footer {
+    width: 600px;
+    max-width: 100%;
+    margin: 0 auto;
 }
 
 .title {
     text-align: center;
-    grid-column: 5 / 9;
-    grid-row: 1;
+}
+
+h1, h2 {
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+h1 {
+    margin: 0;
+}
+
+h2 {
+    color: var(--secondary-color);
+    margin: 0;
+    font-size: 20px;
+    font-weight: 300;
+    border-bottom: 1px rgb(224, 224, 224) solid;
 }
 
 main {
-    grid-column: 5 / 9;
-    grid-row: 2;
-}
-
-li {
+    text-align: left;
     padding: 1rem;
 }
 
-footer {
-    grid-row: 3;
-    grid-column: 6 / 8;
-}
 
 img {
     width: 150px;
+    height: auto;
+}
+
+ol {
+    text-align: left;
+    padding-left: 20px;
+}
+
+li {
+    padding: .5rem;
+    padding-left: 0;
 }
