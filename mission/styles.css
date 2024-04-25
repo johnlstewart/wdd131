@@ -1,0 +1,66 @@
+/*-------------------------Normalized/Reset styles-------------------------*/
+/* Ensures consistent styling across different browsers.*/
+html,
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/*-------------------------Base Variables-------------------------*/
+/* Defines CSS custom properties for global reuse (colors, fonts, etc.). */
+:root {
+    --primary-color: black;
+    --secondary-color: #006EB6;
+    /* BYU-I's Official Color font */
+}
+
+/*-------------------------Global Styles-------------------------*/
+/* Sets default styles for typography, links, and foundational elements. */
+
+.wrapper {
+    width: 600px;
+    margin: 0 auto;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    color: var(--primary-color)
+}
+
+/*-------------------------Layout and Grid System-------------------------*/
+/* Defines styles for the main layout components (header, footer, nav). */
+
+.core {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto minmax(0, 1fr) auto;
+    text-align: left;
+    min-height: 100vh;
+    border: 1px black solid;
+}
+
+.title {
+    text-align: center;
+    grid-column: 5 / 9;
+    grid-row: 1;
+}
+
+main {
+    grid-column: 5 / 9;
+    grid-row: 2;
+}
+
+li {
+    padding: 1rem;
+}
+
+footer {
+    grid-row: 3;
+    grid-column: 6 / 8;
+}
+
+img {
+    width: 150px;
+}
