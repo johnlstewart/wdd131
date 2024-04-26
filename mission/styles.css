@@ -12,6 +12,7 @@ body {
 :root {
     --primary-color: black;
     --secondary-color: #006EB6;
+    --accent-color: #E4E4E4;
     /* BYU-I's Official Color font */
 }
 
@@ -21,6 +22,7 @@ body {
 body {
     font-family: 'Times New Roman', Times, serif;
     font-size: 20px;
+    font-weight: 500;
     line-height: 1.5;
     color: var(--primary-color)
 }
@@ -29,59 +31,86 @@ body {
 /* Defines styles for the main layout components (header, footer, nav). */
 
 .core {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 1fr;
+    align-items: start;
+    justify-content: center;
     text-align: center;
-    min-height: 100vh;
-    border: 1px black solid;
+    padding: 20px;
     box-sizing: border-box;
 }
 
-.title, main, footer {
+/*-------------------------Page-Specific Styles-------------------------*/
+/* Styles specific to individual pages or sections.*/
+
+.title,
+main,
+footer {
     width: 600px;
     max-width: 100%;
     margin: 0 auto;
+    padding-left: 100px;
+    padding-right: 100px;
+    border-left: 1px lightgray solid;
+    border-right: 1px lightgray solid;
 }
+
+
+/* Header */
 
 .title {
-    text-align: center;
+    padding-top: 50px;
+    border-top: 1px lightgray solid;
 }
 
-h1, h2 {
+
+h1,
+h2 {
     text-transform: uppercase;
     letter-spacing: 0.1em;
 }
 
 h1 {
     margin: 0;
+    font-weight: 525;
 }
 
 h2 {
     color: var(--secondary-color);
     margin: 0;
     font-size: 20px;
-    font-weight: 300;
-    border-bottom: 1px rgb(224, 224, 224) solid;
+    font-weight: 100;
+    border-bottom: 1px var(--accent-color) solid;
 }
+
+
+/* Main */
 
 main {
     text-align: left;
-    padding: 1rem;
-}
-
-
-img {
-    width: 150px;
-    height: auto;
+    padding-top: 20px;
 }
 
 ol {
     text-align: left;
-    padding-left: 20px;
+    padding-left: 50px;
 }
 
 li {
-    padding: .5rem;
-    padding-left: 0;
+    padding-bottom: 1rem;
+}
+
+
+/* Footer */
+
+footer {
+    padding-bottom: 50px;
+    border-bottom: 1px lightgray solid;
+}
+
+img {
+    width: 150px;
+    height: auto;
+    padding-top: 20px;
 }
