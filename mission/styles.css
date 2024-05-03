@@ -114,3 +114,27 @@ img {
     height: auto;
     padding-top: 20px;
 }
+
+/*-------------------------Component Styles-------------------------*/
+/*Styles for reusable UI components (buttons, cards, modals).*/
+
+#dark-toggle {
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--secondary-color);
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/*---------------------------Theme Styles---------------------------*/
+/*Switching between light and dark modes*/
+
+body.dark {
+    background-color: #333;
+    color: white;
+}
+
+.dark h2 {
+    color: #A0D4ED;
+}
