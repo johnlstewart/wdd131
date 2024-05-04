@@ -14,6 +14,7 @@ body {
     --secondary-color: #006EB6;
     --accent-color: #E4E4E4;
     /* BYU-I's Official Color font */
+
 }
 
 /*-------------------------Global Styles-------------------------*/
@@ -119,12 +120,11 @@ img {
 /*Styles for reusable UI components (buttons, cards, modals).*/
 
 #dark-toggle {
-    padding: 0.5rem 1rem;
-    border: 1px solid var(--secondary-color);
-    background-color: var(--primary-color);
-    color: white;
+    padding: 0.25rem 0.25rem;
+    border: 1px solid black;
+    background-color: white;
+    color: black;
     border-radius: 5px;
-    cursor: pointer;
 }
 
 /*---------------------------Theme Styles---------------------------*/
@@ -137,4 +137,9 @@ body.dark {
 
 .dark h2 {
     color: #A0D4ED;
+}
+
+body.dark #dark-toggle {
+    background-color: var(--invert-primary-color);
+    color: white;
 }
