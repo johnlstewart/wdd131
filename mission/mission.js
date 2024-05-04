@@ -1,5 +1,5 @@
 const themeSelector = document.getElementById('dark-toggle');
-const label = document.querySelector('label[for')
+const label = document.querySelector('label[for="dark-toggle"]');
 
 // Function to change the theme based on the selected option
 function changeTheme() {
