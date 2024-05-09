@@ -1,0 +1,142 @@
+/*-------------------------Import Fonts-------------------------*/
+/* Fonts that come from an external source. */
+@import url('https://fonts.googleapis.com/css2?family=Mooli&display=swap');
+
+/*-------------------------Normalized/Reset styles-------------------------*/
+/* Ensures consistent styling across different browsers. */
+
+/* My Week 3 Prepare Activity is the source for me using this */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+
+/*-------------------------Base Variables-------------------------*/
+/* Defines CSS custom properties for global reuse (colors, fonts, etc.). */
+:root {
+    --primary-color: #52489c;
+    --secondary-color: #59c3c3;
+    --accent-color: #f45b69;
+    --text-dark: #333;
+    --text-light: #ebebeb;
+    --primary-font: Arial, Helvetica, sans-serif;
+    --secondary-font: 'Mooli', sans-serif;
+}
+
+/*-------------------------Global Styles-------------------------*/
+/* Sets default styles for typography, links, and foundational elements. */
+body {
+    font-family: var(--primary-font);
+    font-size: 1.2em; /* Still working on em vs rem */
+    color: var(--text-dark);
+}
+
+a:link {
+    color: var(--text-light);
+}
+
+a:visited {
+    color: var(--accent-color);
+}
+
+/*-------------------------Layout and Grid System-------------------------*/
+/* Defines styles for the main layout components (header, footer, nav). */
+header, footer {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    text-align: center;
+    padding: 10px 0;
+}
+
+header {
+    font-family: var(--secondary-font);
+}
+
+/*-------------------------Component Styles-------------------------*/
+/* Styles for reusable UI components (buttons, cards, modals). */
+img {
+    max-width: 100%;
+    height: 250px;
+    width: 250px; 
+    object-fit: cover;
+    border-radius: 5px; 
+}
+
+button {                                                       /* Still need to make this NOT look like a button */
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+/*-------------------------Page-Specific Styles-------------------------*/
+/* Styles specific to individual pages or sections.*/
+
+/* Gallery */
+.gallery {
+    display: grid;
+    
+    align-items: center;
+    padding: 5px;
+}
+
+figure {
+    margin: 10px;
+    width: 250px; 
+    height: 250px;
+    overflow: hidden; 
+}
+
+/*-------------------------Responsive Styles-------------------------*/
+/* Media queries for adapting the layout to different screen sizes. */
+@media (min-width: 700px) {
+    .gallery {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    figure {
+        width: 48%; /* Slightly less than half to accommodate margin */
+    }
+}
+
+@media (min-width: 1000px) {
+    .gallery {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    figure {
+        width: 100%;  /* Each figure takes the full width of the image-row div */
+    }
+
+    /* Hide the menu button on wider screens */
+    button.menu {
+        display: none;
+    }
+}
