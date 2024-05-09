@@ -1,0 +1,45 @@
+/*-------------------------Global Styles-------------------------*/
+/* Sets default styles for typography, links, and foundational elements. */
+
+header,
+main,
+footer {
+    max-width: 640px;
+    margin: 1rem auto;
+    border: 1px lightgray solid;
+    background-color: #91ddf7;
+    padding: 1rem;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+/*-------------------------Layout and Grid System-------------------------*/
+/* Defines styles for the main layout components (header, footer, nav). */
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    /* 'Gap' is the new MDN suggestion. 'grid-gap' is deprecated */
+}
+
+section {
+    padding: 1rem;
+    background-color: white;
+}
+
+/*-------------------------Responsive Styles-------------------------*/
+/* Media queries for adapting the layout to different screen sizes.*/
+
+@media screen and (min-width: 500px) {
+    header {
+        color: white;
+        background-color: black;
+    }
+
+    main {
+        grid-template-columns: 1fr 1fr;
+    }
+}
