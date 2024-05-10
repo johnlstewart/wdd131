@@ -42,13 +42,29 @@ time, mark, audio, video {
 /*-------------------------Global Styles-------------------------*/
 /* Sets default styles for typography, links, and foundational elements. */
 body {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr;
-    font-family: var(--primary-font);
-    font-size: 1.2em;
-    background-color: #ebebeb;
-  }
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  font-family: var(--primary-font);
+  font-size: 1.2em;
+  background-color: #ebebeb;
+}
+
+header, footer {
+  text-align: center;
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+}
+
+h1, h2 {
+  text-align: center;
+  font-family: var(--secondary-font);
+  font-size: 2em;
+}
   a:link {
     color: var(--text-light);
   }
@@ -56,46 +72,34 @@ body {
     color: var(--accent-color);
   }
 
-  header, footer {
-    text-align: center;
-    background-color: var(--primary-color);
-    color: var(--text-light);
-  }
-
-h1, h2 {
-    text-align: center;
-    font-family: var(--secondary-font);
-    font-size: 2em;
-}
 
 /*-------------------------Layout and Grid System-------------------------*/
 /* Defines styles for the main layout components (header, footer, nav). */
 header {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-items: center;
     align-items: center;
 }
-
 
 /*-------------------------Component Styles-------------------------*/
 /* Styles for reusable UI components (buttons, cards, modals). */
 img {
-    max-width: 100%;
-    height: 250px;
-    width: 250px;
-    object-fit: cover;
+  max-width: 100%;
+  height: 250px;
+  width: 250px;
+  object-fit: cover;
 }
 
-button {
-    display: flex;
-    flex-direction: column;
-    background-color: var(--primary-color);
-    color: var(--text-light);
-    border: none;
-    padding: 10px 20px;
-    font-size: 1em;
-    align-items: center;
+.topmenu {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  align-items: center;
 }
 
 /*-------------------------Page-Specific Styles-------------------------*/
@@ -104,7 +108,7 @@ button {
 /* Gallery */
 section {
     display: grid;
-    justify-content: center;
+    justify-items: center;
     padding: 5px;
 }
 
@@ -122,45 +126,30 @@ figure {
 /*-------------------------Responsive Styles-------------------------*/
 /* Media queries for adapting the layout to different screen sizes. */
 @media screen and (min-width: 700px) {
-    .gallery {
-      grid-template-columns: 1fr 1fr;
-    }
-
-    header {
-        display: grid;
-        grid: 1fr 1fr;
-    }
-
-    button {
-        width: 700px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    a {
-        justify-content: space-evenly;
-    }
+  .gallery {
+    grid-template-columns: 1fr 1fr;
   }
 
-  @media screen and (min-width: 1000px) {
-    .gallery {
-      grid-template-columns: 1fr 1fr 1fr;
-    }
-
-    header {
-        display: grid;
-        grid: 1fr 1fr;
-    }
-
-    button {
-        width: 700px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    a {
-        justify-content: space-evenly;
-    }
+  header {
+      justify-content: space-between;
+      flex-wrap: wrap; 
   }
+
+  button {
+      display: none;
+  }
+
+  .topmenu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .gallery {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
