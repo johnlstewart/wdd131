@@ -3,7 +3,15 @@ let tasks = [];
 
 function renderTasks(tasks) {
     // get the list element from the DOM
+    const todoList = document.getElementById("todoList"); // Identifies the element "todoList" (which is a <ul> element unordered list) and calls it 'todoList'
+    todoList.innerHTML = ""; // the inner HTML (are below indented, otherwise known as containing) the 'todoList' element, is now equal to empty
     // loop through the tasks array. transform (map) each task object into the appropriate HTML to represent a to-do.
+    tasks.forEach(task => {
+        const li = document.createElement("li");
+        if (task.completed) {
+            li.classList.add("Strike");
+        }
+    });
 }
 
 function newTask() {
