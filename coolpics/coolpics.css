@@ -92,7 +92,7 @@ img {
 }
 
 .topmenu {
-  display: flex;
+  display: none; /* Set to 'none' by default, JavaScript will modify to be 'flex' later */
   flex-direction: column;
   background-color: var(--primary-color);
   color: var(--text-light);
@@ -100,6 +100,36 @@ img {
   padding: 10px 20px;
   font-size: 1em;
   align-items: center;
+}
+
+.viewer {
+  display: none; /* Set to 'none' by default, JavaScript will modify to be something later */
+  position: fixed;
+  top: 0; left: 0; bottom: 0; right: 0;
+  background: rgba(0, 0, 0, 0.75);
+  display: grid;
+  place-items: center;
+  color: white;
+  padding: 20px;
+  box-sizing: border-box;
+  z-index: 1000;
+}
+
+.viewer img {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.close-viewer {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 2em;
+  color: white;
+  cursor: pointer;
+  z-index: 1000;
 }
 
 /*-------------------------Page-Specific Styles-------------------------*/
@@ -130,6 +160,13 @@ figure {
     grid-template-columns: 1fr 1fr;
   }
 
+  .viewer {
+    width: 80%;
+    height: 80%;
+    margin: auto;
+    padding: 40px;
+  }
+
   header {
       justify-content: space-between;
       flex-wrap: wrap; 
@@ -152,4 +189,17 @@ figure {
   .gallery {
     grid-template-columns: 1fr 1fr 1fr;
   }
+
+  .viewer {
+    width: 60%;
+    height: 60%;
+  }
+} 
+
+/*-------------------------Utilities and Helpers-------------------------*/
+/* Utility classes for margins, padding, text alignment, etc. */
+
+/* Hide Button effects */
+.hide {
+  display: none;
 }
