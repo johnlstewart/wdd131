@@ -7,9 +7,11 @@ function renderTasks(tasks) {
 }
 
 function newTask() {
-    // get the value entered into the #todo input
-    // add it to our arrays tasks
-    // render out the list
+    const taskElement = document.getElementById("todo");    // get the value entered into the #todo input
+    const taskValue = taskElement.value;  // holds the content entered by the user as a Constant (that can be used later)
+    const newTask = { detail: taskValue, completed: false }; // The instance-object (which contains 2 properties: a detail called 'task, and a 'completed' check, set to false) is turned into a variable, called 'newTask' 
+    tasks.push(newTask);    // Takes the 'tasks' list and runs the method (function) 'push' alongside 'newTask' (the instance-object-variable) to be run as a parameter for it
+    renderTasks(tasks);    // Kind of equivalent to 'Console.ReadLine()' from C#, but it pertains only to the upcoming list (maybe below 'ul' class="todos"?)
 }
 
 function removeTask(taskElement) {
@@ -49,4 +51,6 @@ function manageTasks(event) {
 }
 
 // Add your event listeners here
+document.getElementById("submitTask").addEventListener("click", newTask) // When the type 'click' is heard by the button with the id 'submitTask' within the document, we want the listener method 'newTask' to be performed
+
 // We need to attach listeners to the submit button and the list. Listen for a click, call the 'newTask' function on submit and call the 'manageTasks' function if either of the icons are clicked in the list of tasks.
