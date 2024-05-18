@@ -6,11 +6,32 @@ function renderTasks(tasks) {
     const todoList = document.getElementById("todoList"); // Identifies the element "todoList" (which is a <ul> element unordered list) and calls it 'todoList'
     todoList.innerHTML = ""; // the inner HTML (are below indented, otherwise known as containing) the 'todoList' element, is now equal to empty
     // loop through the tasks array. transform (map) each task object into the appropriate HTML to represent a to-do.
-    tasks.forEach(task => {
+    tasks.forEach(task => { // performs a 'foreach' loop (like C#) on the tasks list (using a nifty arrow funtion to shorten it)
         const li = document.createElement("li");
         if (task.completed) {
             li.classList.add("Strike");
         }
+
+        const p = document.createElement.apply("p"); // Creates a paragraph element
+        p.textContent = task.detail; // The detail contained within the task variable will be inserted into the paragraph element as 'textContent'
+
+        const div = document.createElement("div"); // adds a <div> element container that will hold the "action" icons
+
+        const deleteSpan = document.createElement("span"); // Makes the <span> element (tag?)
+        deleteSpan.textContent = "❎"; // The "text" content inside it will be called ❎
+        deleteSpan.dataset.action = "delete"; // Pulls up the info in deleteSpan and performs the action "delete" on it
+
+        const completeSpan = document.createElement("span"); // Makes the <span> element (tag?) again
+        completeSpan.textContent = "✅"; // calls it ✅ this time
+        completeSpan.dataset.action = "complete"; // Pulls up the info in deleteSpan and performs the action "complete" on it
+
+        div.appendChild(deleteSpan); // Performs an appendChild function (containing deletespan) to the div element
+        div.appendChild(completeSpan); // Performs an appendChild function (containing completespan) to the div element
+
+        li.appendChild(p); // Performs an appendChild function (holding the paragraph element) to the line item element
+        li.appendChild(div); // Performs an appendChild function (holding the <div> element) to the line item element
+
+        todoList.appendChild(li);
     });
 }
 
