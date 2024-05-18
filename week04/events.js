@@ -12,7 +12,7 @@ function renderTasks(tasks) {
             li.classList.add("Strike");
         }
 
-        const p = document.createElement.apply("p"); // Creates a paragraph element
+        const p = document.createElement("p"); // Creates a paragraph element
         p.textContent = task.detail; // The detail contained within the task variable will be inserted into the paragraph element as 'textContent'
 
         const div = document.createElement("div"); // adds a <div> element container that will hold the "action" icons
@@ -69,17 +69,21 @@ function completeTask(taskElement) {
     console.log(tasks);
 }
 
-function manageTasks(event) {
+function manageTasks(event) { // Making the function called 'manageTasks' and passing 'event' in as a prameter
     // did they click the delete or complete icon?
-    console.log(event.target);
-    console.log(event.currentTarget);
-    // event.target will point to the actual icon clicked on. We need to get the parent li to work with however. HINT: Remember element.closest()? Look it up if you don't
+    console.log(event.target); // console.log() being used to see what actually set off the event
+    const parent = event.target.closest("li"); // Declare a constant called 'parent'. It'll look for the closest line item element of the clicked element within the event
+    if (event.target.dataset.action === "delete") { // within the data set of the targeted event, if that is absolutely, case-sensitively equals to "delete"
+        removeTask(parent); // Then run the 'removeTask' function on the parent constant (baleeted! Del Taco'd?)
+    }
+    if (event.target.dataset.action === "complete") { // within the data set of the targeted event, if that is absolutely, case-sensitively equals to "complete"
+        completeTask(parent); // Then run the 'completeTask' function on the parent constant
+    }
 
-    // because we added 'data-action="delete"' to each icon in a task we can access a dataset property on our target (e.target.dataset.action)
-    // use that in a couple of if statements to decide whether to run removeTask or completeTask
 }
 
 // Add your event listeners here
 document.getElementById("submitTask").addEventListener("click", newTask) // When the type 'click' is heard by the button with the id 'submitTask' within the document, we want the listener method 'newTask' to be performed
+document.getElementById("todoList").addEventListener("click", manageTasks); // When the type 'click' is heard by the button with the id 'todoList' within the document, we want the listener method 'manageTasks' to be performed
 
 // We need to attach listeners to the submit button and the list. Listen for a click, call the 'newTask' function on submit and call the 'manageTasks' function if either of the icons are clicked in the list of tasks.
